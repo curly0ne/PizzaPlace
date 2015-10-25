@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6406E4C21BD6519900575CA5 /* PPPlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6406E4C11BD6519900575CA5 /* PPPlaceTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		6406E4C81BD6B17000575CA5 /* NewYork.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6406E4C71BD6B17000575CA5 /* NewYork.gpx */; settings = {ASSET_TAGS = (); }; };
+		6443E27C1BD8FB9700D4B9D9 /* PPLocationGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 6443E27B1BD8FB9700D4B9D9 /* PPLocationGateway.m */; settings = {ASSET_TAGS = (); }; };
+		64C990EA1BD26D29002E3873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C990E21BD26D29002E3873 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		64C990EC1BD26D29002E3873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C990E61BD26D29002E3873 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		64C990ED1BD26D29002E3873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C990E81BD26D29002E3873 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		64C990FA1BD26E4B002E3873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C990F01BD26E4B002E3873 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		64C991011BD27006002E3873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991001BD27006002E3873 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		64C9910B1BD29FFD002E3873 /* PPNetworkingGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9910A1BD29FFD002E3873 /* PPNetworkingGateway.m */; settings = {ASSET_TAGS = (); }; };
+		64C991141BD3C2C5002E3873 /* PizzaPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64C991121BD3C2C5002E3873 /* PizzaPlace.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		64C991171BD3C307002E3873 /* PPPlacesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991161BD3C307002E3873 /* PPPlacesListVC.m */; settings = {ASSET_TAGS = (); }; };
+		64C9911A1BD3C35E002E3873 /* PPPlaceDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991191BD3C35E002E3873 /* PPPlaceDetailsVC.m */; settings = {ASSET_TAGS = (); }; };
+		64C9911E1BD3C4B2002E3873 /* PPPlacesListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9911D1BD3C4B2002E3873 /* PPPlacesListDataSource.m */; settings = {ASSET_TAGS = (); }; };
+		64C991231BD3D457002E3873 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C991221BD3D457002E3873 /* CoreLocation.framework */; };
+		64C991261BD3FC97002E3873 /* PPDataGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991251BD3FC97002E3873 /* PPDataGateway.m */; settings = {ASSET_TAGS = (); }; };
+		64C991291BD4FEA5002E3873 /* PPDatabaseGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991281BD4FEA5002E3873 /* PPDatabaseGateway.m */; settings = {ASSET_TAGS = (); }; };
+		64C9912E1BD502D0002E3873 /* PPBaseGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9912D1BD502D0002E3873 /* PPBaseGateway.m */; settings = {ASSET_TAGS = (); }; };
+		64C9916D1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9916A1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		64C9916E1BD519E1002E3873 /* PizzaPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9916C1BD519E1002E3873 /* PizzaPlace.m */; settings = {ASSET_TAGS = (); }; };
+		64C991731BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991701BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		64C991741BD519EF002E3873 /* PlaceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991721BD519EF002E3873 /* PlaceDetails.m */; settings = {ASSET_TAGS = (); }; };
+		64C991811BD61A83002E3873 /* PPPersistentStorageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991801BD61A83002E3873 /* PPPersistentStorageController.m */; settings = {ASSET_TAGS = (); }; };
+		64C991851BD64089002E3873 /* PPBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991841BD64089002E3873 /* PPBaseVC.m */; settings = {ASSET_TAGS = (); }; };
+		64C9918C1BD648E1002E3873 /* PPPlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64C9918A1BD648E1002E3873 /* PPPlaceTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		64D1271C1BDACADA00450C39 /* NSManagedObject+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1271B1BDACADA00450C39 /* NSManagedObject+Insert.m */; settings = {ASSET_TAGS = (); }; };
+		64D1271F1BDACAE800450C39 /* NSManagedObject+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1271E1BDACAE800450C39 /* NSManagedObject+Request.m */; settings = {ASSET_TAGS = (); }; };
+		64DDCAE21BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DDCAE01BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		64DDCAE31BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DDCAE11BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		64FE122F1BDBD54300F35068 /* PPActivityIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FE122E1BDBD54300F35068 /* PPActivityIndicatorFooterView.m */; settings = {ASSET_TAGS = (); }; };
+		64FE12311BDBD56000F35068 /* PPActivityIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FE12301BDBD56000F35068 /* PPActivityIndicatorFooterView.xib */; settings = {ASSET_TAGS = (); }; };
+		6D76A1AAC477B03472FA337B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0192D83EF6BDEB11AEF0A205 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0192D83EF6BDEB11AEF0A205 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D9B4428B21872769793A15 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6406E4C01BD6519900575CA5 /* PPPlaceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlaceTableViewCell.h; sourceTree = "<group>"; };
+		6406E4C11BD6519900575CA5 /* PPPlaceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlaceTableViewCell.m; sourceTree = "<group>"; };
+		6406E4C31BD66A2600575CA5 /* PPPlacesListDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlacesListDataSourceDelegate.h; sourceTree = "<group>"; };
+		6406E4C41BD6985800575CA5 /* PPPlaceTypeEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPPlaceTypeEnum.h; sourceTree = "<group>"; };
+		6406E4C71BD6B17000575CA5 /* NewYork.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NewYork.gpx; sourceTree = "<group>"; };
+		6443E27A1BD8FB9700D4B9D9 /* PPLocationGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLocationGateway.h; sourceTree = "<group>"; };
+		6443E27B1BD8FB9700D4B9D9 /* PPLocationGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLocationGateway.m; sourceTree = "<group>"; };
+		64C990AC1BD26AB7002E3873 /* PizzaPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C990E21BD26D29002E3873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		64C990E41BD26D29002E3873 /* PizzaPlace.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PizzaPlace.plist; sourceTree = "<group>"; };
+		64C990E71BD26D29002E3873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		64C990E91BD26D29002E3873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		64C990EF1BD26E4B002E3873 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		64C990F01BD26E4B002E3873 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		64C991001BD27006002E3873 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		64C991021BD27022002E3873 /* PizzaPlace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PizzaPlace-Prefix.pch"; sourceTree = "<group>"; };
+		64C991071BD28F3B002E3873 /* PPPlacesFetcherProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlacesFetcherProtocol.h; sourceTree = "<group>"; };
+		64C991091BD29FFD002E3873 /* PPNetworkingGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkingGateway.h; sourceTree = "<group>"; };
+		64C9910A1BD29FFD002E3873 /* PPNetworkingGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNetworkingGateway.m; sourceTree = "<group>"; wrapsLines = 0; };
+		64C991131BD3C2C5002E3873 /* PizzaPlace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PizzaPlace.xcdatamodel; sourceTree = "<group>"; };
+		64C991151BD3C307002E3873 /* PPPlacesListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlacesListVC.h; sourceTree = "<group>"; };
+		64C991161BD3C307002E3873 /* PPPlacesListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlacesListVC.m; sourceTree = "<group>"; };
+		64C991181BD3C35E002E3873 /* PPPlaceDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlaceDetailsVC.h; sourceTree = "<group>"; };
+		64C991191BD3C35E002E3873 /* PPPlaceDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlaceDetailsVC.m; sourceTree = "<group>"; };
+		64C9911C1BD3C4B2002E3873 /* PPPlacesListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlacesListDataSource.h; sourceTree = "<group>"; };
+		64C9911D1BD3C4B2002E3873 /* PPPlacesListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlacesListDataSource.m; sourceTree = "<group>"; };
+		64C991221BD3D457002E3873 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		64C991241BD3FC97002E3873 /* PPDataGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDataGateway.h; sourceTree = "<group>"; };
+		64C991251BD3FC97002E3873 /* PPDataGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDataGateway.m; sourceTree = "<group>"; };
+		64C991271BD4FEA5002E3873 /* PPDatabaseGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPDatabaseGateway.h; sourceTree = "<group>"; };
+		64C991281BD4FEA5002E3873 /* PPDatabaseGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDatabaseGateway.m; sourceTree = "<group>"; };
+		64C9912A1BD50236002E3873 /* PPObservableProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPObservableProtocol.h; sourceTree = "<group>"; };
+		64C9912C1BD502D0002E3873 /* PPBaseGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseGateway.h; sourceTree = "<group>"; };
+		64C9912D1BD502D0002E3873 /* PPBaseGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseGateway.m; sourceTree = "<group>"; };
+		64C991691BD519E1002E3873 /* PizzaPlace+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PizzaPlace+CoreDataProperties.h"; sourceTree = "<group>"; };
+		64C9916A1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PizzaPlace+CoreDataProperties.m"; sourceTree = "<group>"; };
+		64C9916B1BD519E1002E3873 /* PizzaPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaPlace.h; sourceTree = "<group>"; };
+		64C9916C1BD519E1002E3873 /* PizzaPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaPlace.m; sourceTree = "<group>"; };
+		64C9916F1BD519EF002E3873 /* PlaceDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlaceDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		64C991701BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlaceDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		64C991711BD519EF002E3873 /* PlaceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetails.h; sourceTree = "<group>"; };
+		64C991721BD519EF002E3873 /* PlaceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetails.m; sourceTree = "<group>"; };
+		64C9917F1BD61A83002E3873 /* PPPersistentStorageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPersistentStorageController.h; sourceTree = "<group>"; };
+		64C991801BD61A83002E3873 /* PPPersistentStorageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPersistentStorageController.m; sourceTree = "<group>"; };
+		64C991831BD64089002E3873 /* PPBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseVC.h; sourceTree = "<group>"; };
+		64C991841BD64089002E3873 /* PPBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseVC.m; sourceTree = "<group>"; };
+		64C991861BD6462F002E3873 /* PPPersistentStorageControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPersistentStorageControllerProtocol.h; sourceTree = "<group>"; };
+		64C9918A1BD648E1002E3873 /* PPPlaceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPPlaceTableViewCell.xib; sourceTree = "<group>"; };
+		64D1271A1BDACADA00450C39 /* NSManagedObject+Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Insert.h"; sourceTree = "<group>"; };
+		64D1271B1BDACADA00450C39 /* NSManagedObject+Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Insert.m"; sourceTree = "<group>"; };
+		64D1271D1BDACAE800450C39 /* NSManagedObject+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+Request.h"; sourceTree = "<group>"; };
+		64D1271E1BDACAE800450C39 /* NSManagedObject+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+Request.m"; sourceTree = "<group>"; };
+		64DDCADF1BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlaceDetailsTableViewCell.h; sourceTree = "<group>"; };
+		64DDCAE01BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlaceDetailsTableViewCell.m; sourceTree = "<group>"; };
+		64DDCAE11BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPPlaceDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		64FE122D1BDBD54300F35068 /* PPActivityIndicatorFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPActivityIndicatorFooterView.h; sourceTree = "<group>"; };
+		64FE122E1BDBD54300F35068 /* PPActivityIndicatorFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPActivityIndicatorFooterView.m; sourceTree = "<group>"; };
+		64FE12301BDBD56000F35068 /* PPActivityIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPActivityIndicatorFooterView.xib; sourceTree = "<group>"; };
+		9652FCC359831B2DF2184959 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64C990A91BD26AB7002E3873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C991231BD3D457002E3873 /* CoreLocation.framework in Frameworks */,
+				6D76A1AAC477B03472FA337B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03024DBD15B945237EB8D104 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64C991221BD3D457002E3873 /* CoreLocation.framework */,
+				0192D83EF6BDEB11AEF0A205 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40D59B20D39CBFC896F7B225 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9652FCC359831B2DF2184959 /* Pods.debug.xcconfig */,
+				18D9B4428B21872769793A15 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6443E2791BD8FB9700D4B9D9 /* PPLocationGateway */ = {
+			isa = PBXGroup;
+			children = (
+				6443E27A1BD8FB9700D4B9D9 /* PPLocationGateway.h */,
+				6443E27B1BD8FB9700D4B9D9 /* PPLocationGateway.m */,
+			);
+			path = PPLocationGateway;
+			sourceTree = "<group>";
+		};
+		64C990A31BD26AB7002E3873 = {
+			isa = PBXGroup;
+			children = (
+				64C990C91BD26C33002E3873 /* Source */,
+				64C990E01BD26D29002E3873 /* Resources */,
+				64C990AD1BD26AB7002E3873 /* Products */,
+				40D59B20D39CBFC896F7B225 /* Pods */,
+				03024DBD15B945237EB8D104 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		64C990AD1BD26AB7002E3873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64C990AC1BD26AB7002E3873 /* PizzaPlace.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64C990C91BD26C33002E3873 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				64C991111BD3C2C5002E3873 /* CoreData */,
+				64C990FF1BD27006002E3873 /* Default */,
+				64C990EE1BD26E4B002E3873 /* AppDelegate */,
+				64C990F51BD26E4B002E3873 /* ViewControllers */,
+				64C990FC1BD26E8F002E3873 /* Logic */,
+				64C990FE1BD26E8F002E3873 /* Protocols */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		64C990E01BD26D29002E3873 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64C9910C1BD2A250002E3873 /* Location */,
+				64C990E11BD26D29002E3873 /* Assets */,
+				64C990E31BD26D29002E3873 /* Plists */,
+				64C990E51BD26D29002E3873 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64C990E11BD26D29002E3873 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				64C990E21BD26D29002E3873 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		64C990E31BD26D29002E3873 /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				64C990E41BD26D29002E3873 /* PizzaPlace.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		64C990E51BD26D29002E3873 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				64C990E61BD26D29002E3873 /* LaunchScreen.storyboard */,
+				64C990E81BD26D29002E3873 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		64C990EE1BD26E4B002E3873 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				64C990EF1BD26E4B002E3873 /* AppDelegate.h */,
+				64C990F01BD26E4B002E3873 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		64C990F51BD26E4B002E3873 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				64C991821BD64078002E3873 /* PPBaseVC */,
+				64C990F61BD26E4B002E3873 /* PPPlaceDetailsVC */,
+				64C990F71BD26E4B002E3873 /* PPPlacesListVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		64C990F61BD26E4B002E3873 /* PPPlaceDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				64C991181BD3C35E002E3873 /* PPPlaceDetailsVC.h */,
+				64C991191BD3C35E002E3873 /* PPPlaceDetailsVC.m */,
+				64DDCADE1BDA68BB00A3884D /* PPPlaceDetailsTableViewCell */,
+			);
+			path = PPPlaceDetailsVC;
+			sourceTree = "<group>";
+		};
+		64C990F71BD26E4B002E3873 /* PPPlacesListVC */ = {
+			isa = PBXGroup;
+			children = (
+				64C991151BD3C307002E3873 /* PPPlacesListVC.h */,
+				64C991161BD3C307002E3873 /* PPPlacesListVC.m */,
+				6406E4C41BD6985800575CA5 /* PPPlaceTypeEnum.h */,
+				64C9911B1BD3C49A002E3873 /* PPPlacesListDataSource */,
+			);
+			path = PPPlacesListVC;
+			sourceTree = "<group>";
+		};
+		64C990FC1BD26E8F002E3873 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				64C9917E1BD61A83002E3873 /* PPPersistentStorageController */,
+				64C9912B1BD502C2002E3873 /* PPBaseGateway */,
+				64C991041BD280CA002E3873 /* PPDatabaseGateway */,
+				6443E2791BD8FB9700D4B9D9 /* PPLocationGateway */,
+				64C991061BD280CA002E3873 /* PPNetworkingGateway */,
+				64C990FD1BD26E8F002E3873 /* PPDataGateway */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		64C990FD1BD26E8F002E3873 /* PPDataGateway */ = {
+			isa = PBXGroup;
+			children = (
+				64C991241BD3FC97002E3873 /* PPDataGateway.h */,
+				64C991251BD3FC97002E3873 /* PPDataGateway.m */,
+			);
+			path = PPDataGateway;
+			sourceTree = "<group>";
+		};
+		64C990FE1BD26E8F002E3873 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				64C991071BD28F3B002E3873 /* PPPlacesFetcherProtocol.h */,
+				64C9912A1BD50236002E3873 /* PPObservableProtocol.h */,
+				64C991861BD6462F002E3873 /* PPPersistentStorageControllerProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		64C990FF1BD27006002E3873 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				64C991001BD27006002E3873 /* main.m */,
+				64C991021BD27022002E3873 /* PizzaPlace-Prefix.pch */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		64C991041BD280CA002E3873 /* PPDatabaseGateway */ = {
+			isa = PBXGroup;
+			children = (
+				64C991271BD4FEA5002E3873 /* PPDatabaseGateway.h */,
+				64C991281BD4FEA5002E3873 /* PPDatabaseGateway.m */,
+			);
+			path = PPDatabaseGateway;
+			sourceTree = "<group>";
+		};
+		64C991061BD280CA002E3873 /* PPNetworkingGateway */ = {
+			isa = PBXGroup;
+			children = (
+				64C991091BD29FFD002E3873 /* PPNetworkingGateway.h */,
+				64C9910A1BD29FFD002E3873 /* PPNetworkingGateway.m */,
+			);
+			path = PPNetworkingGateway;
+			sourceTree = "<group>";
+		};
+		64C9910C1BD2A250002E3873 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				6406E4C71BD6B17000575CA5 /* NewYork.gpx */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		64C991111BD3C2C5002E3873 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				64C991751BD52F30002E3873 /* Categories */,
+				64C9912F1BD5039F002E3873 /* Entities */,
+				64C991121BD3C2C5002E3873 /* PizzaPlace.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		64C9911B1BD3C49A002E3873 /* PPPlacesListDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				64C9911C1BD3C4B2002E3873 /* PPPlacesListDataSource.h */,
+				64C9911D1BD3C4B2002E3873 /* PPPlacesListDataSource.m */,
+				6406E4C31BD66A2600575CA5 /* PPPlacesListDataSourceDelegate.h */,
+				64FE122C1BDBD50200F35068 /* PPActivityIndicatorFooterView */,
+				64C991871BD648BA002E3873 /* PPPlaceTableViewCell */,
+			);
+			path = PPPlacesListDataSource;
+			sourceTree = "<group>";
+		};
+		64C9912B1BD502C2002E3873 /* PPBaseGateway */ = {
+			isa = PBXGroup;
+			children = (
+				64C9912C1BD502D0002E3873 /* PPBaseGateway.h */,
+				64C9912D1BD502D0002E3873 /* PPBaseGateway.m */,
+			);
+			path = PPBaseGateway;
+			sourceTree = "<group>";
+		};
+		64C9912F1BD5039F002E3873 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				64C991671BD519D0002E3873 /* PizzaPlace */,
+				64C991681BD519D0002E3873 /* PlaceDetails */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		64C991671BD519D0002E3873 /* PizzaPlace */ = {
+			isa = PBXGroup;
+			children = (
+				64C991691BD519E1002E3873 /* PizzaPlace+CoreDataProperties.h */,
+				64C9916A1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m */,
+				64C9916B1BD519E1002E3873 /* PizzaPlace.h */,
+				64C9916C1BD519E1002E3873 /* PizzaPlace.m */,
+			);
+			path = PizzaPlace;
+			sourceTree = "<group>";
+		};
+		64C991681BD519D0002E3873 /* PlaceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				64C9916F1BD519EF002E3873 /* PlaceDetails+CoreDataProperties.h */,
+				64C991701BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m */,
+				64C991711BD519EF002E3873 /* PlaceDetails.h */,
+				64C991721BD519EF002E3873 /* PlaceDetails.m */,
+			);
+			path = PlaceDetails;
+			sourceTree = "<group>";
+		};
+		64C991751BD52F30002E3873 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				64D1271A1BDACADA00450C39 /* NSManagedObject+Insert.h */,
+				64D1271B1BDACADA00450C39 /* NSManagedObject+Insert.m */,
+				64D1271D1BDACAE800450C39 /* NSManagedObject+Request.h */,
+				64D1271E1BDACAE800450C39 /* NSManagedObject+Request.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		64C9917E1BD61A83002E3873 /* PPPersistentStorageController */ = {
+			isa = PBXGroup;
+			children = (
+				64C9917F1BD61A83002E3873 /* PPPersistentStorageController.h */,
+				64C991801BD61A83002E3873 /* PPPersistentStorageController.m */,
+			);
+			path = PPPersistentStorageController;
+			sourceTree = "<group>";
+		};
+		64C991821BD64078002E3873 /* PPBaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				64C991831BD64089002E3873 /* PPBaseVC.h */,
+				64C991841BD64089002E3873 /* PPBaseVC.m */,
+			);
+			path = PPBaseVC;
+			sourceTree = "<group>";
+		};
+		64C991871BD648BA002E3873 /* PPPlaceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6406E4C01BD6519900575CA5 /* PPPlaceTableViewCell.h */,
+				6406E4C11BD6519900575CA5 /* PPPlaceTableViewCell.m */,
+				64C9918A1BD648E1002E3873 /* PPPlaceTableViewCell.xib */,
+			);
+			path = PPPlaceTableViewCell;
+			sourceTree = "<group>";
+		};
+		64DDCADE1BDA68BB00A3884D /* PPPlaceDetailsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				64DDCADF1BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.h */,
+				64DDCAE01BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m */,
+				64DDCAE11BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib */,
+			);
+			path = PPPlaceDetailsTableViewCell;
+			sourceTree = "<group>";
+		};
+		64FE122C1BDBD50200F35068 /* PPActivityIndicatorFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				64FE122D1BDBD54300F35068 /* PPActivityIndicatorFooterView.h */,
+				64FE122E1BDBD54300F35068 /* PPActivityIndicatorFooterView.m */,
+				64FE12301BDBD56000F35068 /* PPActivityIndicatorFooterView.xib */,
+			);
+			path = PPActivityIndicatorFooterView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64C990AB1BD26AB7002E3873 /* PizzaPlace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64C990C61BD26AB7002E3873 /* Build configuration list for PBXNativeTarget "PizzaPlace" */;
+			buildPhases = (
+				7467AE2DE403E5825C4F591B /* Check Pods Manifest.lock */,
+				64C990A81BD26AB7002E3873 /* Sources */,
+				64C990A91BD26AB7002E3873 /* Frameworks */,
+				64C990AA1BD26AB7002E3873 /* Resources */,
+				DD949421D1B7EC63871A7EA5 /* Embed Pods Frameworks */,
+				D8C5A69B3C2252C7AD098DF8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzaPlace;
+			productName = PizzaPlace;
+			productReference = 64C990AC1BD26AB7002E3873 /* PizzaPlace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64C990A41BD26AB7002E3873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PP;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Company;
+				TargetAttributes = {
+					64C990AB1BD26AB7002E3873 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 64C990A71BD26AB7002E3873 /* Build configuration list for PBXProject "PizzaPlace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 64C990A31BD26AB7002E3873;
+			productRefGroup = 64C990AD1BD26AB7002E3873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64C990AB1BD26AB7002E3873 /* PizzaPlace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64C990AA1BD26AB7002E3873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C9918C1BD648E1002E3873 /* PPPlaceTableViewCell.xib in Resources */,
+				64C990EC1BD26D29002E3873 /* LaunchScreen.storyboard in Resources */,
+				6406E4C81BD6B17000575CA5 /* NewYork.gpx in Resources */,
+				64FE12311BDBD56000F35068 /* PPActivityIndicatorFooterView.xib in Resources */,
+				64DDCAE31BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib in Resources */,
+				64C990EA1BD26D29002E3873 /* Assets.xcassets in Resources */,
+				64C990ED1BD26D29002E3873 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7467AE2DE403E5825C4F591B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C5A69B3C2252C7AD098DF8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD949421D1B7EC63871A7EA5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64C990A81BD26AB7002E3873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64C9916D1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m in Sources */,
+				64C9916E1BD519E1002E3873 /* PizzaPlace.m in Sources */,
+				64D1271F1BDACAE800450C39 /* NSManagedObject+Request.m in Sources */,
+				64C991741BD519EF002E3873 /* PlaceDetails.m in Sources */,
+				64C990FA1BD26E4B002E3873 /* AppDelegate.m in Sources */,
+				6406E4C21BD6519900575CA5 /* PPPlaceTableViewCell.m in Sources */,
+				64C991811BD61A83002E3873 /* PPPersistentStorageController.m in Sources */,
+				64FE122F1BDBD54300F35068 /* PPActivityIndicatorFooterView.m in Sources */,
+				64C991261BD3FC97002E3873 /* PPDataGateway.m in Sources */,
+				64C9911E1BD3C4B2002E3873 /* PPPlacesListDataSource.m in Sources */,
+				64C9911A1BD3C35E002E3873 /* PPPlaceDetailsVC.m in Sources */,
+				64C991851BD64089002E3873 /* PPBaseVC.m in Sources */,
+				64D1271C1BDACADA00450C39 /* NSManagedObject+Insert.m in Sources */,
+				64C991011BD27006002E3873 /* main.m in Sources */,
+				64DDCAE21BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m in Sources */,
+				6443E27C1BD8FB9700D4B9D9 /* PPLocationGateway.m in Sources */,
+				64C991171BD3C307002E3873 /* PPPlacesListVC.m in Sources */,
+				64C9912E1BD502D0002E3873 /* PPBaseGateway.m in Sources */,
+				64C991731BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m in Sources */,
+				64C9910B1BD29FFD002E3873 /* PPNetworkingGateway.m in Sources */,
+				64C991141BD3C2C5002E3873 /* PizzaPlace.xcdatamodeld in Sources */,
+				64C991291BD4FEA5002E3873 /* PPDatabaseGateway.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		64C990E61BD26D29002E3873 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64C990E71BD26D29002E3873 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		64C990E81BD26D29002E3873 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64C990E91BD26D29002E3873 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64C990C41BD26AB7002E3873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		64C990C51BD26AB7002E3873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64C990C71BD26AB7002E3873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9652FCC359831B2DF2184959 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitriy Lutsenko (GR4N3Q92AH)";
+				GCC_PREFIX_HEADER = "Source/Default/PizzaPlace-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Plists/PizzaPlace.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nixsolutions.PizzaPlace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		64C990C81BD26AB7002E3873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D9B4428B21872769793A15 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dmitriy Lutsenko (GR4N3Q92AH)";
+				GCC_PREFIX_HEADER = "Source/Default/PizzaPlace-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Plists/PizzaPlace.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nixsolutions.PizzaPlace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64C990A71BD26AB7002E3873 /* Build configuration list for PBXProject "PizzaPlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C990C41BD26AB7002E3873 /* Debug */,
+				64C990C51BD26AB7002E3873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64C990C61BD26AB7002E3873 /* Build configuration list for PBXNativeTarget "PizzaPlace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C990C71BD26AB7002E3873 /* Debug */,
+				64C990C81BD26AB7002E3873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		64C991121BD3C2C5002E3873 /* PizzaPlace.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				64C991131BD3C2C5002E3873 /* PizzaPlace.xcdatamodel */,
+			);
+			currentVersion = 64C991131BD3C2C5002E3873 /* PizzaPlace.xcdatamodel */;
+			path = PizzaPlace.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 64C990A41BD26AB7002E3873 /* Project object */;
+}
