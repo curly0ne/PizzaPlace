@@ -10,9 +10,9 @@
 
 #import "AFNetworking.h"
 
-static NSString * const kFoursquarePlacesURLString = @"https://api.foursquare.com/v2/venues/explore";
-static NSString * const kFoursquareOAuthToken = @"OBML545RJQB5DOR50JW3NO53IVZTOAYFX0RIJVSJSZJULZ3V";
-static NSString * const kFoursquareVersion = @"20151023";
+static NSString * const PPFoursquarePlacesURLString = @"https://api.foursquare.com/v2/venues/explore";
+static NSString * const PPFoursquareOAuthToken = @"OBML545RJQB5DOR50JW3NO53IVZTOAYFX0RIJVSJSZJULZ3V";
+static NSString * const PPFoursquareVersion = @"20151023";
 
 @interface PPNetworkingGateway ()
 
@@ -47,7 +47,7 @@ static NSString * const kFoursquareVersion = @"20151023";
 
 	PPWeakSelf;
 	
-	[manager GET:kFoursquarePlacesURLString
+	[manager GET:PPFoursquarePlacesURLString
 	  parameters:requestParameters
 		 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject)
 			{
@@ -81,8 +81,8 @@ static NSString * const kFoursquareVersion = @"20151023";
 	[parameters setObject:@(amount) forKey:@"limit"];
 	[parameters setObject:@(offset) forKey:@"offset"];
 	[parameters setObject:@1 forKey:@"sortByDistance"];
-	[parameters setObject:kFoursquareOAuthToken forKey:@"oauth_token"];
-	[parameters setObject:kFoursquareVersion forKey:@"v"];
+	[parameters setObject:PPFoursquareOAuthToken forKey:@"oauth_token"];
+	[parameters setObject:PPFoursquareVersion forKey:@"v"];
 	[parameters setObject:@5000 forKey:@"radius"];
 	
 	return parameters;

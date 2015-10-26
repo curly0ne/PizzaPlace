@@ -18,6 +18,12 @@
 
 static NSUInteger const kPlacesPerRequest = 10;
 
+typedef NS_ENUM(NSUInteger, PPAlertType)
+{
+	PPAlertTypeNoMorePlaces,
+	PPAlertTypeUnknownError
+};
+
 @interface PPPlacesListVC ()<PPPlacesListDataSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,7 +35,7 @@ static NSUInteger const kPlacesPerRequest = 10;
 
 - (void)instantiatePersistentStorageController;
 - (void)instantiateTableDataSource;
-- (void)showNoMorePlacesAroundAlert;
+- (void)showAlertOfType:(PPAlertType)alertType;
 
 @end
 
@@ -68,10 +74,24 @@ static NSUInteger const kPlacesPerRequest = 10;
 	[[self tableDataSource] setDelegate:self];
 }
 
-- (void)showNoMorePlacesAroundAlert
+- (void)showAlertOfType:(PPAlertType)alertType
 {
-	UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Wooah"
-																   message:@"Pretty enough to choose from"
+	NSString *alertTitle, *alertMessage;
+	
+	switch (alertType)
+	{
+		case PPAlertTypeNoMorePlaces:
+			alertTitle = @"Wooah";
+			alertMessage = @"Pretty enough to choose from";
+			break;
+			
+		default:
+			alertTitle = @"Sorry";
+			alertMessage = @"An unxpected error occurred";
+	}
+	
+	UIAlertController *alert = [UIAlertController alertControllerWithTitle:alertTitle
+																   message:alertMessage
 															preferredStyle:UIAlertControllerStyleAlert];
 	
 	PPWeakSelf;
@@ -98,12 +118,15 @@ static NSUInteger const kPlacesPerRequest = 10;
 									amount:kPlacesPerRequest
 								completion:^(NSError *error)
 								{
-									if ([[error domain] isEqualToString:@"No more places around"])
+									if (error)
 									{
 										[dataSource resetToIdle];
 										[[weakSelf tableView] setScrollEnabled:NO]; //prevents moving to the tap point after resetting
-			
-										[weakSelf showNoMorePlacesAroundAlert];
+										
+										if ([[error domain] isEqualToString:@"No more places around"])
+											[weakSelf showAlertOfType:PPAlertTypeNoMorePlaces];
+										else
+											[weakSelf showAlertOfType:PPAlertTypeUnknownError];
 									}
 								}];
 }
