@@ -10,6 +10,10 @@
 		6406E4C21BD6519900575CA5 /* PPPlaceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6406E4C11BD6519900575CA5 /* PPPlaceTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		6406E4C81BD6B17000575CA5 /* NewYork.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 6406E4C71BD6B17000575CA5 /* NewYork.gpx */; settings = {ASSET_TAGS = (); }; };
 		6443E27C1BD8FB9700D4B9D9 /* PPLocationGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 6443E27B1BD8FB9700D4B9D9 /* PPLocationGateway.m */; settings = {ASSET_TAGS = (); }; };
+		647093A61BDF7C950083C127 /* PPCDPlace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 647093A31BDF7C950083C127 /* PPCDPlace+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		647093A71BDF7C950083C127 /* PPCDPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 647093A51BDF7C950083C127 /* PPCDPlace.m */; settings = {ASSET_TAGS = (); }; };
+		647093AD1BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 647093AA1BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		647093AE1BDF7CC30083C127 /* PPCDPlaceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 647093AC1BDF7CC30083C127 /* PPCDPlaceDetails.m */; settings = {ASSET_TAGS = (); }; };
 		64C990EA1BD26D29002E3873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C990E21BD26D29002E3873 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		64C990EC1BD26D29002E3873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C990E61BD26D29002E3873 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		64C990ED1BD26D29002E3873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C990E81BD26D29002E3873 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
@@ -24,10 +28,6 @@
 		64C991261BD3FC97002E3873 /* PPDataGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991251BD3FC97002E3873 /* PPDataGateway.m */; settings = {ASSET_TAGS = (); }; };
 		64C991291BD4FEA5002E3873 /* PPDatabaseGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991281BD4FEA5002E3873 /* PPDatabaseGateway.m */; settings = {ASSET_TAGS = (); }; };
 		64C9912E1BD502D0002E3873 /* PPBaseGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9912D1BD502D0002E3873 /* PPBaseGateway.m */; settings = {ASSET_TAGS = (); }; };
-		64C9916D1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9916A1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		64C9916E1BD519E1002E3873 /* PizzaPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C9916C1BD519E1002E3873 /* PizzaPlace.m */; settings = {ASSET_TAGS = (); }; };
-		64C991731BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991701BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		64C991741BD519EF002E3873 /* PlaceDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991721BD519EF002E3873 /* PlaceDetails.m */; settings = {ASSET_TAGS = (); }; };
 		64C991811BD61A83002E3873 /* PPPersistentStorageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991801BD61A83002E3873 /* PPPersistentStorageController.m */; settings = {ASSET_TAGS = (); }; };
 		64C991851BD64089002E3873 /* PPBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C991841BD64089002E3873 /* PPBaseVC.m */; settings = {ASSET_TAGS = (); }; };
 		64C9918C1BD648E1002E3873 /* PPPlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64C9918A1BD648E1002E3873 /* PPPlaceTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -50,6 +50,14 @@
 		6406E4C71BD6B17000575CA5 /* NewYork.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NewYork.gpx; sourceTree = "<group>"; };
 		6443E27A1BD8FB9700D4B9D9 /* PPLocationGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLocationGateway.h; sourceTree = "<group>"; };
 		6443E27B1BD8FB9700D4B9D9 /* PPLocationGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLocationGateway.m; sourceTree = "<group>"; };
+		647093A21BDF7C950083C127 /* PPCDPlace+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPCDPlace+CoreDataProperties.h"; sourceTree = "<group>"; };
+		647093A31BDF7C950083C127 /* PPCDPlace+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPCDPlace+CoreDataProperties.m"; sourceTree = "<group>"; };
+		647093A41BDF7C950083C127 /* PPCDPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCDPlace.h; sourceTree = "<group>"; };
+		647093A51BDF7C950083C127 /* PPCDPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCDPlace.m; sourceTree = "<group>"; };
+		647093A91BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PPCDPlaceDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
+		647093AA1BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PPCDPlaceDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
+		647093AB1BDF7CC30083C127 /* PPCDPlaceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCDPlaceDetails.h; sourceTree = "<group>"; };
+		647093AC1BDF7CC30083C127 /* PPCDPlaceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCDPlaceDetails.m; sourceTree = "<group>"; };
 		64C990AC1BD26AB7002E3873 /* PizzaPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C990E21BD26D29002E3873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64C990E41BD26D29002E3873 /* PizzaPlace.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PizzaPlace.plist; sourceTree = "<group>"; };
@@ -77,14 +85,6 @@
 		64C9912A1BD50236002E3873 /* PPObservableProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPObservableProtocol.h; sourceTree = "<group>"; };
 		64C9912C1BD502D0002E3873 /* PPBaseGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseGateway.h; sourceTree = "<group>"; };
 		64C9912D1BD502D0002E3873 /* PPBaseGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseGateway.m; sourceTree = "<group>"; };
-		64C991691BD519E1002E3873 /* PizzaPlace+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PizzaPlace+CoreDataProperties.h"; sourceTree = "<group>"; };
-		64C9916A1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PizzaPlace+CoreDataProperties.m"; sourceTree = "<group>"; };
-		64C9916B1BD519E1002E3873 /* PizzaPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaPlace.h; sourceTree = "<group>"; };
-		64C9916C1BD519E1002E3873 /* PizzaPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaPlace.m; sourceTree = "<group>"; };
-		64C9916F1BD519EF002E3873 /* PlaceDetails+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PlaceDetails+CoreDataProperties.h"; sourceTree = "<group>"; };
-		64C991701BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlaceDetails+CoreDataProperties.m"; sourceTree = "<group>"; };
-		64C991711BD519EF002E3873 /* PlaceDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetails.h; sourceTree = "<group>"; };
-		64C991721BD519EF002E3873 /* PlaceDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetails.m; sourceTree = "<group>"; };
 		64C9917F1BD61A83002E3873 /* PPPersistentStorageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPersistentStorageController.h; sourceTree = "<group>"; };
 		64C991801BD61A83002E3873 /* PPPersistentStorageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPersistentStorageController.m; sourceTree = "<group>"; };
 		64C991831BD64089002E3873 /* PPBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseVC.h; sourceTree = "<group>"; };
@@ -142,6 +142,28 @@
 				6443E27B1BD8FB9700D4B9D9 /* PPLocationGateway.m */,
 			);
 			path = PPLocationGateway;
+			sourceTree = "<group>";
+		};
+		6470939A1BDF7C2D0083C127 /* PPCDPlace */ = {
+			isa = PBXGroup;
+			children = (
+				647093A21BDF7C950083C127 /* PPCDPlace+CoreDataProperties.h */,
+				647093A31BDF7C950083C127 /* PPCDPlace+CoreDataProperties.m */,
+				647093A41BDF7C950083C127 /* PPCDPlace.h */,
+				647093A51BDF7C950083C127 /* PPCDPlace.m */,
+			);
+			path = PPCDPlace;
+			sourceTree = "<group>";
+		};
+		647093A81BDF7CB10083C127 /* PPCDPlaceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				647093A91BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.h */,
+				647093AA1BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.m */,
+				647093AB1BDF7CC30083C127 /* PPCDPlaceDetails.h */,
+				647093AC1BDF7CC30083C127 /* PPCDPlaceDetails.m */,
+			);
+			path = PPCDPlaceDetails;
 			sourceTree = "<group>";
 		};
 		64C990A31BD26AB7002E3873 = {
@@ -353,32 +375,10 @@
 		64C9912F1BD5039F002E3873 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				64C991671BD519D0002E3873 /* PizzaPlace */,
-				64C991681BD519D0002E3873 /* PlaceDetails */,
+				6470939A1BDF7C2D0083C127 /* PPCDPlace */,
+				647093A81BDF7CB10083C127 /* PPCDPlaceDetails */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		64C991671BD519D0002E3873 /* PizzaPlace */ = {
-			isa = PBXGroup;
-			children = (
-				64C991691BD519E1002E3873 /* PizzaPlace+CoreDataProperties.h */,
-				64C9916A1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m */,
-				64C9916B1BD519E1002E3873 /* PizzaPlace.h */,
-				64C9916C1BD519E1002E3873 /* PizzaPlace.m */,
-			);
-			path = PizzaPlace;
-			sourceTree = "<group>";
-		};
-		64C991681BD519D0002E3873 /* PlaceDetails */ = {
-			isa = PBXGroup;
-			children = (
-				64C9916F1BD519EF002E3873 /* PlaceDetails+CoreDataProperties.h */,
-				64C991701BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m */,
-				64C991711BD519EF002E3873 /* PlaceDetails.h */,
-				64C991721BD519EF002E3873 /* PlaceDetails.m */,
-			);
-			path = PlaceDetails;
 			sourceTree = "<group>";
 		};
 		64C991751BD52F30002E3873 /* Categories */ = {
@@ -566,11 +566,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64C9916D1BD519E1002E3873 /* PizzaPlace+CoreDataProperties.m in Sources */,
-				64C9916E1BD519E1002E3873 /* PizzaPlace.m in Sources */,
+				647093A71BDF7C950083C127 /* PPCDPlace.m in Sources */,
 				64D1271F1BDACAE800450C39 /* NSManagedObject+Request.m in Sources */,
-				64C991741BD519EF002E3873 /* PlaceDetails.m in Sources */,
 				64C990FA1BD26E4B002E3873 /* AppDelegate.m in Sources */,
+				647093AD1BDF7CC30083C127 /* PPCDPlaceDetails+CoreDataProperties.m in Sources */,
 				6406E4C21BD6519900575CA5 /* PPPlaceTableViewCell.m in Sources */,
 				64C991811BD61A83002E3873 /* PPPersistentStorageController.m in Sources */,
 				64FE122F1BDBD54300F35068 /* PPActivityIndicatorFooterView.m in Sources */,
@@ -584,10 +583,11 @@
 				6443E27C1BD8FB9700D4B9D9 /* PPLocationGateway.m in Sources */,
 				64C991171BD3C307002E3873 /* PPPlacesListVC.m in Sources */,
 				64C9912E1BD502D0002E3873 /* PPBaseGateway.m in Sources */,
-				64C991731BD519EF002E3873 /* PlaceDetails+CoreDataProperties.m in Sources */,
+				647093AE1BDF7CC30083C127 /* PPCDPlaceDetails.m in Sources */,
 				64C9910B1BD29FFD002E3873 /* PPNetworkingGateway.m in Sources */,
 				64C991141BD3C2C5002E3873 /* PizzaPlace.xcdatamodeld in Sources */,
 				64C991291BD4FEA5002E3873 /* PPDatabaseGateway.m in Sources */,
+				647093A61BDF7C950083C127 /* PPCDPlace+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

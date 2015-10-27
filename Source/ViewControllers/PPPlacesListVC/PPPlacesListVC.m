@@ -14,7 +14,7 @@
 #import "PPPlaceTableViewCell.h"
 #import "PPPlacesListDataSourceDelegate.h"
 #import "PPPlaceDetailsVC.h"
-#import "PizzaPlace.h"
+#import "PPCDPlace.h"
 
 static NSUInteger const kPlacesPerRequest = 10;
 
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 @property (strong, nonatomic) PPDataGateway *dataGateway;
 @property (strong, nonatomic) PPPersistentStorageController *persistentStorageController;
 @property (strong, nonatomic) PPPlacesListDataSource *tableDataSource;
-@property (strong, nonatomic) PizzaPlace *selectedPlace;
+@property (strong, nonatomic) PPCDPlace *selectedPlace;
 
 - (void)instantiatePersistentStorageController;
 - (void)instantiateTableDataSource;
@@ -131,7 +131,7 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 								}];
 }
 
-- (void)dataSource:(PPPlacesListDataSource *)dataSource didSelectPlace:(PizzaPlace *)place
+- (void)dataSource:(PPPlacesListDataSource *)dataSource didSelectPlace:(PPCDPlace *)place
 {
 	[self setSelectedPlace:place];
 	

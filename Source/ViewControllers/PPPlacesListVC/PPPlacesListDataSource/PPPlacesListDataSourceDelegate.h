@@ -7,12 +7,12 @@
 //
 
 @class PPPlacesListDataSource;
-@class PizzaPlace;
+@class PPCDPlace;
 
 @protocol PPPlacesListDataSourceDelegate <NSObject>
 
 @optional
-- (void)dataSource:(PPPlacesListDataSource *)dataSource didSelectPlace:(PizzaPlace *)place;
+- (void)dataSource:(PPPlacesListDataSource *)dataSource didSelectPlace:(PPCDPlace *)place;
 
 @required
 - (void)dataSource:(PPPlacesListDataSource *)dataSource isRequestingForDataUpdateWithCurrentObjectsCount:(NSUInteger)count;

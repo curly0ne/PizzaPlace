@@ -1,17 +1,17 @@
 //
-//  PizzaPlace+CoreDataProperties.m
+//  PPCDPlace+CoreDataProperties.m
 //  PizzaPlace
 //
-//  Created by Dmytro Lutsenko on 10/23/15.
+//  Created by Dmytro Lutsenko on 10/27/15.
 //  Copyright © 2015 Company. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "PizzaPlace+CoreDataProperties.h"
+#import "PPCDPlace+CoreDataProperties.h"
 
-@implementation PizzaPlace (CoreDataProperties)
+@implementation PPCDPlace (CoreDataProperties)
 
 @dynamic distance;
 @dynamic name;

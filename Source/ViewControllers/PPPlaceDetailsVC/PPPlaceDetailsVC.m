@@ -8,8 +8,8 @@
 
 #import "PPPlaceDetailsVC.h"
 #import "PPPlaceDetailsTableViewCell.h"
-#import "PizzaPlace.h"
-#import "PlaceDetails.h"
+#import "PPCDPlace.h"
+#import "PPCDPlaceDetails.h"
 
 #import <objc/runtime.h>
 
@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSArray *placeAttributesArray;
 
 - (void)prepareTableView;
-- (NSArray *)makeArrayOfPlaceObject:(PizzaPlace *)place;
+- (NSArray *)makeArrayOfPlaceObject:(PPCDPlace *)place;
 
 @end
 
@@ -74,12 +74,12 @@
 	[[self tableView] registerNib:placeDetailsCellNib forCellReuseIdentifier:NSStringFromClass([PPPlaceDetailsTableViewCell class])];
 }
 
-- (NSArray *)makeArrayOfPlaceObject:(PizzaPlace *)place
+- (NSArray *)makeArrayOfPlaceObject:(PPCDPlace *)place
 {
 	unsigned int placePropertyCount = 0, detailsPropertyCount = 0;
 	
-	objc_property_t *placeProperties = class_copyPropertyList([PizzaPlace class], &placePropertyCount);
-	objc_property_t *detailsProperties = class_copyPropertyList([PlaceDetails class], &detailsPropertyCount);
+	objc_property_t *placeProperties = class_copyPropertyList([PPCDPlace class], &placePropertyCount);
+	objc_property_t *detailsProperties = class_copyPropertyList([PPCDPlaceDetails class], &detailsPropertyCount);
 	
 	NSMutableArray *propertyNames = [NSMutableArray array];
 	

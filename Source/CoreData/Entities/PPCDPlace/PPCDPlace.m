@@ -1,15 +1,15 @@
 //
-//  PlaceDetails.m
+//  PPCDPlace.m
 //  PizzaPlace
 //
-//  Created by Dmytro Lutsenko on 10/19/15.
+//  Created by Dmytro Lutsenko on 10/27/15.
 //  Copyright © 2015 Company. All rights reserved.
 //
 
-#import "PlaceDetails.h"
-#import "PizzaPlace.h"
+#import "PPCDPlace.h"
+#import "PPCDPlaceDetails.h"
 
-@implementation PlaceDetails
+@implementation PPCDPlace
 
 // Insert code here to add functionality to your managed object subclass
 

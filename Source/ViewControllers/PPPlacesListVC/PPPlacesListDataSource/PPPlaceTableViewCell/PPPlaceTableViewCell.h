@@ -6,10 +6,10 @@
 //  Copyright © 2015 Company. All rights reserved.
 //
 
-@class PizzaPlace;
+@class PPCDPlace;
 
 @interface PPPlaceTableViewCell : UITableViewCell
 
-- (void)setupWithPlace:(PizzaPlace *)place;
+- (void)setupWithPlace:(PPCDPlace *)place;
 
 @end

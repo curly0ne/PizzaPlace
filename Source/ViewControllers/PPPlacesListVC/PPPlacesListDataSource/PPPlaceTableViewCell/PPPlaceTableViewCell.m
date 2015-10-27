@@ -7,7 +7,7 @@
 //
 
 #import "PPPlaceTableViewCell.h"
-#import "PizzaPlace.h"
+#import "PPCDPlace.h"
 
 @interface PPPlaceTableViewCell ()
 
@@ -21,7 +21,7 @@
 
 #pragma mark - Setup
 
-- (void)setupWithPlace:(PizzaPlace *)place
+- (void)setupWithPlace:(PPCDPlace *)place
 {
 	[[self placeName] setText:[place name]];
 	[[self distance] setText:[NSString stringWithFormat:@"%@ m", [place distance]]];

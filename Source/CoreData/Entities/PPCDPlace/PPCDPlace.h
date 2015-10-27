@@ -1,8 +1,8 @@
 //
-//  PizzaPlace.h
+//  PPCDPlace.h
 //  PizzaPlace
 //
-//  Created by Dmytro Lutsenko on 10/19/15.
+//  Created by Dmytro Lutsenko on 10/27/15.
 //  Copyright © 2015 Company. All rights reserved.
 //
 
@@ -11,11 +11,11 @@
 
 #import <CoreData/CoreData.h>
 
-@class PlaceDetails;
+@class PPCDPlaceDetails;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PizzaPlace : NSManagedObject
+@interface PPCDPlace : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -23,4 +23,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "PizzaPlace+CoreDataProperties.h"
+#import "PPCDPlace+CoreDataProperties.h"

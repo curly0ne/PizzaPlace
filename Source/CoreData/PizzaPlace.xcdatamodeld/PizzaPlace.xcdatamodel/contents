@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Automatic">
-    <entity name="PizzaPlace" representedClassName="PizzaPlace" syncable="YES">
+    <entity name="PPCDPlace" representedClassName="PPCDPlace" syncable="YES">
         <attribute name="distance" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="details" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PlaceDetails" inverseName="place" inverseEntity="PlaceDetails" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PPCDPlaceDetails" inverseName="place" inverseEntity="PPCDPlaceDetails" syncable="YES"/>
     </entity>
-    <entity name="PlaceDetails" representedClassName="PlaceDetails" syncable="YES">
+    <entity name="PPCDPlaceDetails" representedClassName="PPCDPlaceDetails" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="menuUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="place" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PizzaPlace" inverseName="details" inverseEntity="PizzaPlace" syncable="YES"/>
+        <relationship name="place" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PPCDPlace" inverseName="details" inverseEntity="PPCDPlace" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PizzaPlace" positionX="-13986" positionY="-5296" width="146" height="103"/>
-        <element name="PlaceDetails" positionX="-13707" positionY="-5310" width="128" height="118"/>
+        <element name="PPCDPlace" positionX="-13986" positionY="-5296" width="146" height="103"/>
+        <element name="PPCDPlaceDetails" positionX="-13707" positionY="-5310" width="128" height="118"/>
     </elements>
 </model>

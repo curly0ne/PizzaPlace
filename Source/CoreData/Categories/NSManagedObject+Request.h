@@ -12,6 +12,6 @@
 
 + (NSFetchRequest *)requestInContext:(NSManagedObjectContext *)context;
 + (NSFetchRequest *)requestWithPredicate:(NSPredicate *)predicate inContext:(NSManagedObjectContext *)context;
-+ (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context;
++ (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context error:(NSError **)error;
 
 @end

@@ -12,7 +12,7 @@
 
 static NSString * const PPFoursquarePlacesURLString = @"https://api.foursquare.com/v2/venues/explore";
 static NSString * const PPFoursquareOAuthToken = @"OBML545RJQB5DOR50JW3NO53IVZTOAYFX0RIJVSJSZJULZ3V";
-static NSString * const PPFoursquareVersion = @"20151023";
+static NSString * const PPFoursquareVersion = @"20151027";
 
 @interface PPNetworkingGateway ()
 

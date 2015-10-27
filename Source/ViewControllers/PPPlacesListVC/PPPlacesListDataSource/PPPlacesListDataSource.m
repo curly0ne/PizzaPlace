@@ -9,7 +9,7 @@
 #import "PPPlacesListDataSource.h"
 #import "PPPersistentStorageControllerProtocol.h"
 #import "PPPlaceTableViewCell.h"
-#import "PizzaPlace.h"
+#import "PPCDPlace.h"
 #import "PPPlacesListDataSourceDelegate.h"
 #import "PPActivityIndicatorFooterView.h"
 
@@ -57,7 +57,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	PizzaPlace *selectedPlace = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+	PPCDPlace *selectedPlace = [[self fetchedResultsController] objectAtIndexPath:indexPath];
 	
 	[[self delegate] dataSource:self didSelectPlace:selectedPlace];
 	
@@ -117,7 +117,7 @@
 {
 	PPPlaceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([PPPlaceTableViewCell class])];
 	
-	PizzaPlace *place = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+	PPCDPlace *place = [[self fetchedResultsController] objectAtIndexPath:indexPath];
 	[cell setupWithPlace:place];
 	
 	return cell;
@@ -150,7 +150,7 @@
 		return;
 	}
 	
-	NSFetchRequest *fetchRequest = [PizzaPlace requestInContext:[[self storageController] managedObjectContext]];
+	NSFetchRequest *fetchRequest = [PPCDPlace requestInContext:[[self storageController] managedObjectContext]];
 	NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
 
 	[fetchRequest setSortDescriptors:[NSArray arrayWithObject:sort]];

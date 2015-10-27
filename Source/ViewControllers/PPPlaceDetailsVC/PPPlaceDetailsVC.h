@@ -8,10 +8,10 @@
 
 #import "PPBaseVC.h"
 
-@class PizzaPlace;
+@class PPCDPlace;
 
 @interface PPPlaceDetailsVC : PPBaseVC
 
-@property (strong, nonatomic) PizzaPlace *place;
+@property (strong, nonatomic) PPCDPlace *place;
 
 @end

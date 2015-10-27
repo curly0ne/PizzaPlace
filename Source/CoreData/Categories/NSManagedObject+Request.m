@@ -29,11 +29,9 @@
 	return request;
 }
 
-+ (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context
++ (NSArray *)executeFetchRequest:(NSFetchRequest *)request inContext:(NSManagedObjectContext *)context error:(NSError *__autoreleasing *)error
 {
-	NSError *error;
-	
-	return [context executeFetchRequest:request error:&error];
+	return [context executeFetchRequest:request error:error];
 }
 
 @end

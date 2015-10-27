@@ -8,8 +8,8 @@
 
 #import "PPDatabaseGateway.h"
 #import "PPPersistentStorageControllerProtocol.h"
-#import "PizzaPlace.h"
-#import "PlaceDetails.h"
+#import "PPCDPlace.h"
+#import "PPCDPlaceDetails.h"
 
 #import <CoreData/CoreData.h>
 
@@ -49,17 +49,20 @@
 		NSPredicate *placesPredicate = [NSPredicate predicateWithFormat:@"name = %@ AND distance = %@", place[@"name"], place[@"location"][@"distance"]];
 		[[self storedRequest] setPredicate:placesPredicate];
 		
-		NSArray *existingEntries = [PizzaPlace executeFetchRequest:[self storedRequest] inContext:[self context]];
+		NSError *error;
+		NSArray *existingEntries = [PPCDPlace executeFetchRequest:[self storedRequest]
+														 inContext:[self context]
+															 error:&error];
 		
 		if ([existingEntries count] > 0)
 			continue;
 		
-		PizzaPlace *pizzaPlace = [PizzaPlace insertInContext:[self context]];
+		PPCDPlace *pizzaPlace = [PPCDPlace insertInContext:[self context]];
 		[pizzaPlace setName:place[@"name"]];
 		[pizzaPlace setDistance:place[@"location"][@"distance"]];
 		[pizzaPlace setRating:![place[@"rating"] isEqualToNumber:@(0)] ? place[@"rating"] : nil];
 		
-		PlaceDetails *placeDetails = [PlaceDetails insertInContext:[self context]];
+		PPCDPlaceDetails *placeDetails = [PPCDPlaceDetails insertInContext:[self context]];
 		[placeDetails setAddress:[place[@"location"][@"formattedAddress"] componentsJoinedByString:@",\n"]];
 		[placeDetails setPhone:place[@"contact"][@"phone"] ? : nil];
 		[placeDetails setUrl:place[@"url"] ? : nil];
@@ -96,7 +99,7 @@
 	if (_storedRequest)
 		return _storedRequest;
 	
-	_storedRequest = [PizzaPlace requestInContext:[self context]];
+	_storedRequest = [PPCDPlace requestInContext:[self context]];
 	
 	return _storedRequest;
 }
