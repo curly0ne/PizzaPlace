@@ -173,6 +173,9 @@
 {
 	PPWeakSelf;
 	
+	if (currentNumberOfCells_ == 0)
+		return;
+	
 	[UIView animateWithDuration:0.3
 					 animations:^
 						{
