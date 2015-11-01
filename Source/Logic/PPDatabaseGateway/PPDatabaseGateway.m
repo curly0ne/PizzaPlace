@@ -51,8 +51,10 @@
 		
 		NSError *error;
 		NSArray *existingEntries = [PPCDPlace executeFetchRequest:[self storedRequest]
-														 inContext:[self context]
-															 error:&error];
+														inContext:[self context]
+															error:&error];
+		
+		NSAssert(!error, @"Places request execution failure");
 		
 		if ([existingEntries count] > 0)
 			continue;

@@ -10,6 +10,9 @@
 #import "PPLocationGateway.h"
 #import "PPNetworkingGateway.h"
 #import "PPDatabaseGateway.h"
+#import "PPError.h"
+
+NSString *PPOtherErrorDomain = @"PPOtherErrorDomain";
 
 @interface PPDataGateway ()
 
@@ -39,33 +42,35 @@
 
 #pragma mark - PPPlacesFetcherProtocol
 
-- (void)loadPlacesWithType:(PPPlaceType)placeType startingIndex:(NSUInteger)index amount:(NSUInteger)amount completion:(void (^)(NSError *))completionHandler
+- (void)loadPlacesWithType:(PPPlaceType)placeType startingIndex:(NSUInteger)index amount:(NSUInteger)amount completion:(void (^)(PPError *))completionHandler
 {
 	PPWeakSelf;
 	
-	[[self locationGateway] requestLocationWithCallback:^(NSDictionary *location, NSError *error)
+	[[self locationGateway] requestLocationWithCallback:^(NSDictionary *location, PPError *error)
 	{
 		if (!error)
 		{
 			void (^successBlock)(NSArray *) = ^(NSArray *places)
 			{
 				if ([[weakSelf databaseGateway] savePlaces:places] == 0)
-					completionHandler([NSError errorWithDomain:@"No more places around"
-														  code:12345
-													  userInfo:nil]);
+					completionHandler([PPError errorWithDomain:PPOtherErrorDomain code:0]);
 			};
 			
-			void (^failureBlock)(NSError *) = ^(NSError *error)
+			void (^failureBlock)(PPError *) = ^(PPError *error)
 			{
 				completionHandler(error);
 			};
 			
 			[[weakSelf networkingGateway] loadPlacesWithType:placeType
-										   startingIndex:index
-												  amount:amount
-											userLocation:location
-												 success:successBlock
-												 failure:failureBlock];
+											   startingIndex:index
+													  amount:amount
+												userLocation:location
+													 success:successBlock
+													 failure:failureBlock];
+		}
+		else
+		{
+			completionHandler(error);
 		}
 	}];
 }

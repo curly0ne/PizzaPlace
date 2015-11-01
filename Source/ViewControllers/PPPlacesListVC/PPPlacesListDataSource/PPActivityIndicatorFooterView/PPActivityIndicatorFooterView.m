@@ -10,12 +10,4 @@
 
 @implementation PPActivityIndicatorFooterView
 
-#pragma mark - Constructor
-
-+ (id)loadFooterView
-{
-	return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
-}
-
-
 @end

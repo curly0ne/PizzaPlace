@@ -8,7 +8,9 @@
 
 #import "PPBaseGateway.h"
 
-typedef void (^PPLocationCallbackBlock)(NSDictionary *location, NSError *error);
+@class PPError;
+
+typedef void (^PPLocationCallbackBlock)(NSDictionary *location, PPError *error);
 
 @interface PPLocationGateway : PPBaseGateway
 

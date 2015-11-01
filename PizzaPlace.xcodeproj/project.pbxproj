@@ -35,6 +35,7 @@
 		64D1271F1BDACAE800450C39 /* NSManagedObject+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D1271E1BDACAE800450C39 /* NSManagedObject+Request.m */; settings = {ASSET_TAGS = (); }; };
 		64DDCAE21BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DDCAE01BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		64DDCAE31BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64DDCAE11BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		64FC82CE1BE644DD0094B439 /* PPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FC82CD1BE644DD0094B439 /* PPError.m */; settings = {ASSET_TAGS = (); }; };
 		64FE122F1BDBD54300F35068 /* PPActivityIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FE122E1BDBD54300F35068 /* PPActivityIndicatorFooterView.m */; settings = {ASSET_TAGS = (); }; };
 		64FE12311BDBD56000F35068 /* PPActivityIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64FE12301BDBD56000F35068 /* PPActivityIndicatorFooterView.xib */; settings = {ASSET_TAGS = (); }; };
 		6D76A1AAC477B03472FA337B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0192D83EF6BDEB11AEF0A205 /* libPods.a */; };
@@ -98,6 +99,9 @@
 		64DDCADF1BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPlaceDetailsTableViewCell.h; sourceTree = "<group>"; };
 		64DDCAE01BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlaceDetailsTableViewCell.m; sourceTree = "<group>"; };
 		64DDCAE11BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPPlaceDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		64FC82C91BE63E2B0094B439 /* PPBaseVCProtected.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPBaseVCProtected.h; sourceTree = "<group>"; };
+		64FC82CC1BE644DD0094B439 /* PPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPError.h; sourceTree = "<group>"; };
+		64FC82CD1BE644DD0094B439 /* PPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPError.m; sourceTree = "<group>"; };
 		64FE122D1BDBD54300F35068 /* PPActivityIndicatorFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPActivityIndicatorFooterView.h; sourceTree = "<group>"; };
 		64FE122E1BDBD54300F35068 /* PPActivityIndicatorFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPActivityIndicatorFooterView.m; sourceTree = "<group>"; };
 		64FE12301BDBD56000F35068 /* PPActivityIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPActivityIndicatorFooterView.xib; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				64C990F51BD26E4B002E3873 /* ViewControllers */,
 				64C990FC1BD26E8F002E3873 /* Logic */,
 				64C990FE1BD26E8F002E3873 /* Protocols */,
+				64FC82CA1BE641D80094B439 /* Utility */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 			children = (
 				64C991831BD64089002E3873 /* PPBaseVC.h */,
 				64C991841BD64089002E3873 /* PPBaseVC.m */,
+				64FC82C91BE63E2B0094B439 /* PPBaseVCProtected.h */,
 			);
 			path = PPBaseVC;
 			sourceTree = "<group>";
@@ -428,6 +434,23 @@
 				64DDCAE11BDA68BB00A3884D /* PPPlaceDetailsTableViewCell.xib */,
 			);
 			path = PPPlaceDetailsTableViewCell;
+			sourceTree = "<group>";
+		};
+		64FC82CA1BE641D80094B439 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				64FC82CB1BE644C50094B439 /* PPError */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		64FC82CB1BE644C50094B439 /* PPError */ = {
+			isa = PBXGroup;
+			children = (
+				64FC82CC1BE644DD0094B439 /* PPError.h */,
+				64FC82CD1BE644DD0094B439 /* PPError.m */,
+			);
+			path = PPError;
 			sourceTree = "<group>";
 		};
 		64FE122C1BDBD50200F35068 /* PPActivityIndicatorFooterView */ = {
@@ -574,6 +597,7 @@
 				64C991811BD61A83002E3873 /* PPPersistentStorageController.m in Sources */,
 				64FE122F1BDBD54300F35068 /* PPActivityIndicatorFooterView.m in Sources */,
 				64C991261BD3FC97002E3873 /* PPDataGateway.m in Sources */,
+				64FC82CE1BE644DD0094B439 /* PPError.m in Sources */,
 				64C9911E1BD3C4B2002E3873 /* PPPlacesListDataSource.m in Sources */,
 				64C9911A1BD3C35E002E3873 /* PPPlaceDetailsVC.m in Sources */,
 				64C991851BD64089002E3873 /* PPBaseVC.m in Sources */,

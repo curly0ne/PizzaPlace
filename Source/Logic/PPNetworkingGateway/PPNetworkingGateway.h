@@ -9,6 +9,8 @@
 #import "PPBaseGateway.h"
 #import "PPPlaceTypeEnum.h"
 
+@class PPError;
+
 @interface PPNetworkingGateway : PPBaseGateway
 
 - (void)loadPlacesWithType:(PPPlaceType)type
@@ -16,6 +18,6 @@
 					amount:(NSUInteger)amount
 			  userLocation:(NSDictionary *)userLocation
 				   success:(void (^)(NSArray *places))successBlock
-				   failure:(void (^)(NSError *error))failureBlock;
+				   failure:(void (^)(PPError *error))failureBlock;
 
 @end

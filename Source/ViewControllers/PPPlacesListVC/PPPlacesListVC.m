@@ -15,14 +15,10 @@
 #import "PPPlacesListDataSourceDelegate.h"
 #import "PPPlaceDetailsVC.h"
 #import "PPCDPlace.h"
+#import "PPBaseVCProtected.h"
+#import "PPError.h"
 
 static NSUInteger const kPlacesPerRequest = 10;
-
-typedef NS_ENUM(NSUInteger, PPAlertType)
-{
-	PPAlertTypeNoMorePlaces,
-	PPAlertTypeUnknownError
-};
 
 @interface PPPlacesListVC ()<PPPlacesListDataSourceDelegate>
 
@@ -35,7 +31,6 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 
 - (void)instantiatePersistentStorageController;
 - (void)instantiateTableDataSource;
-- (void)showAlertOfType:(PPAlertType)alertType;
 
 @end
 
@@ -74,39 +69,6 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 	[[self tableDataSource] setDelegate:self];
 }
 
-- (void)showAlertOfType:(PPAlertType)alertType
-{
-	NSString *alertTitle, *alertMessage;
-	
-	switch (alertType)
-	{
-		case PPAlertTypeNoMorePlaces:
-			alertTitle = @"Wooah";
-			alertMessage = @"Pretty enough to choose from";
-			break;
-			
-		default:
-			alertTitle = @"Sorry";
-			alertMessage = @"An unxpected error occurred";
-	}
-	
-	UIAlertController *alert = [UIAlertController alertControllerWithTitle:alertTitle
-																   message:alertMessage
-															preferredStyle:UIAlertControllerStyleAlert];
-	
-	PPWeakSelf;
-	
-	UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay"
-													 style:UIAlertActionStyleDefault
-												   handler:^(UIAlertAction * _Nonnull action)
-													{
-														[[weakSelf tableView] setScrollEnabled:YES];
-													}];
-	
-	[alert addAction:action];
-	[self presentViewController:alert animated:YES completion:nil];
-}
-
 #pragma mark - PPPlacesDataSourceDelegate
 
 - (void)dataSource:(PPPlacesListDataSource *)dataSource isRequestingForDataUpdateWithCurrentObjectsCount:(NSUInteger)count
@@ -116,17 +78,20 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 	[[self dataGateway] loadPlacesWithType:PPPlaceTypePizza
 							 startingIndex:count
 									amount:kPlacesPerRequest
-								completion:^(NSError *error)
+								completion:^(PPError *error)
 								{
 									if (error)
 									{
 										[dataSource resetToIdle];
 										[[weakSelf tableView] setScrollEnabled:NO]; //prevents moving to the tap point after resetting
 										
-										if ([[error domain] isEqualToString:@"No more places around"])
-											[weakSelf showAlertOfType:PPAlertTypeNoMorePlaces];
-										else
-											[weakSelf showAlertOfType:PPAlertTypeUnknownError];
+										[weakSelf handleError:error withHandlerBlock:^
+										{
+											dispatch_async(dispatch_get_main_queue(), ^
+											{
+												[[weakSelf tableView] setScrollEnabled:YES];
+											});
+										}];
 									}
 								}];
 }

@@ -7,7 +7,11 @@
 //
 
 #import "PPLocationGateway.h"
+#import "PPError.h"
+
 #import <CoreLocation/CoreLocation.h>
+
+NSString *PPLocationErrorDomain= @"PPLocationErrorDomain";
 
 @interface PPLocationGateway ()<CLLocationManagerDelegate>
 
@@ -89,7 +93,9 @@
 {
 	if ([self locationCallback])
 	{
-		[self locationCallback](nil, error);
+		PPError *customError = [PPError errorWithDomain:PPLocationErrorDomain code:0];
+		
+		[self locationCallback](nil, customError);
 	}
 }
 

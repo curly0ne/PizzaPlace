@@ -8,6 +8,4 @@
 
 @interface PPActivityIndicatorFooterView : UITableViewHeaderFooterView
 
-+ loadFooterView;
-
 @end

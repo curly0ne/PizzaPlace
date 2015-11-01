@@ -8,11 +8,13 @@
 
 #import "PPPlaceTypeEnum.h"
 
+@class PPError;
+
 @protocol PPPlacesFetcherProtocol <NSObject>
 
 - (void)loadPlacesWithType:(PPPlaceType)placeType
 			 startingIndex:(NSUInteger)index
 					amount:(NSUInteger)amount
-				completion:(void (^)(NSError *error))completionHandler;
+				completion:(void (^)(PPError *error))completionHandler;
 
 @end

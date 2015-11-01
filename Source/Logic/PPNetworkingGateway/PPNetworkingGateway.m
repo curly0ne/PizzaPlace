@@ -7,12 +7,14 @@
 //
 
 #import "PPNetworkingGateway.h"
-
 #import "AFNetworking.h"
+#import "PPError.h"
 
 static NSString * const PPFoursquarePlacesURLString = @"https://api.foursquare.com/v2/venues/explore";
 static NSString * const PPFoursquareOAuthToken = @"OBML545RJQB5DOR50JW3NO53IVZTOAYFX0RIJVSJSZJULZ3V";
-static NSString * const PPFoursquareVersion = @"20151027";
+static NSString * const PPFoursquareVersion = @"20151101";
+
+NSString *PPNetworkErrorDomain = @"PPNetworkErrorDomain";
 
 @interface PPNetworkingGateway ()
 
@@ -36,7 +38,7 @@ static NSString * const PPFoursquareVersion = @"20151027";
 					amount:(NSUInteger)amount
 			  userLocation:(NSDictionary *)userLocation
 				   success:(void (^)(NSArray *))successBlock
-				   failure:(void (^)(NSError *))failureBlock
+				   failure:(void (^)(PPError *))failureBlock
 {
 	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 	
@@ -55,7 +57,9 @@ static NSString * const PPFoursquareVersion = @"20151027";
 			}
 		 failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error)
 			{
-				failureBlock(error);
+				PPError *customError = [PPError errorWithDomain:PPNetworkErrorDomain code:0];
+				
+				failureBlock(customError);
 			}];
 }
 
