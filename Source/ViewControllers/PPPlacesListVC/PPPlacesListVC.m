@@ -87,10 +87,7 @@ static NSUInteger const kPlacesPerRequest = 10;
 										
 										[weakSelf handleError:error withHandlerBlock:^
 										{
-											dispatch_async(dispatch_get_main_queue(), ^
-											{
-												[[weakSelf tableView] setScrollEnabled:YES];
-											});
+											[[weakSelf tableView] setScrollEnabled:YES];
 										}];
 									}
 								}];

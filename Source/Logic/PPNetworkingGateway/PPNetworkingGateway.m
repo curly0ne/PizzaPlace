@@ -101,7 +101,7 @@ NSString *PPNetworkErrorDomain = @"PPNetworkErrorDomain";
 	
 	NSMutableArray *venues = [NSMutableArray array];
 	
-	[items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+	[items enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
 	{
 		[venues addObject:obj[@"venue"]];
 	}];
