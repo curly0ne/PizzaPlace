@@ -9,6 +9,7 @@
 FOUNDATION_EXPORT NSString *PPNetworkErrorDomain;
 FOUNDATION_EXPORT NSString *PPLocationErrorDomain;
 FOUNDATION_EXPORT NSString *PPOtherErrorDomain;
+FOUNDATION_EXPORT NSString *PPDatabaseErrorDomain;
 
 @interface PPError : NSObject
 

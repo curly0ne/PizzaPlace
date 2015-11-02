@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 	PPAlertTypeNoMorePlacesError,
 	PPAlertTypeNetworkError,
 	PPAlertTypeLocationError,
-	PPAlertTypeDatabaseEror
+	PPAlertTypeDatabaseError
 };
 
 @interface PPBaseVC ()
@@ -36,6 +36,8 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 	else if ([[error domain] isEqualToString:PPLocationErrorDomain])
 		[self showAlertOfType:PPAlertTypeLocationError withActionBlock:handler];
 	
+	else if ([[error domain] isEqualToString:PPDatabaseErrorDomain])
+		[self showAlertOfType:PPAlertTypeDatabaseError withActionBlock:handler];
 	else
 		[self showAlertOfType:PPAlertTypeNoMorePlacesError withActionBlock:handler];
 }
@@ -53,7 +55,7 @@ typedef NS_ENUM(NSUInteger, PPAlertType)
 			alertMessage = @"Something went wrong on those Internets";
 			break;
 
-		case PPAlertTypeDatabaseEror:
+		case PPAlertTypeDatabaseError:
 			alertTitle = @"Sorry";
 			alertMessage = @"The data aren't ready to be presented";
 			break;

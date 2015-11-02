@@ -31,7 +31,7 @@
 		92A25678399A5DDCB356C846F13AF5B7 /* NSAttributedString+CCLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7C9E73B752E523AECD8E7F971B937 /* NSAttributedString+CCLFormat.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		99E82D6DC032555656E37AF2367B20D3 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 423DD213D8D02DC98F0DC714BC7480A1 /* UIButton+AFNetworking.m */; };
 		9A04E971065AF4281E43947994A53D07 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B1D0EEFA12F3FD088FC50D16DD7815 /* UIWebView+AFNetworking.m */; };
-		9B47A1441B897F71505D8BE670B0940B /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E9C270CA966B76791322EF5E0548B /* UIAlertView+AFNetworking.m */; };
+		9B47A1441B897F71505D8BE670B0940B /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D75E9C270CA966B76791322EF5E0548B /* UIAlertView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated"; }; };
 		9EB96B5837A8BB74D1A10F76432A9503 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
 		A28588D1CCB5253CF80509F30A1AF1A5 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C2A8CA9F57C0BD2C2B361235E02B92 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4EE8D1BEE38B87066BAA1B09A047356 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CFDA2C0C886F4A3577C2451EC1A6B1A2 /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,7 +49,7 @@
 		DB2E92A71137AD2E6993E8B0CE682C89 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 83462EC9E348555D2EFF9E97CA48F54D /* AFURLConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB42C604EF2F39D542F805AC6A05E090 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B240D99C3FC6A7DC6C66A2434CA799 /* MobileCoreServices.framework */; };
 		DECD5915774351B8473476B041DD87D7 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C60A2948053CFB9767F7CE78045F9B77 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E6DD6ABB4FC13B60FA54C950FB6B262B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5848839B147BF5AE7ED0B6F05711A0E6 /* AFURLConnectionOperation.m */; };
+		E6DD6ABB4FC13B60FA54C950FB6B262B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5848839B147BF5AE7ED0B6F05711A0E6 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated"; }; };
 		F08E19D8B440D85D564273B1A501B1FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2B5E013FD1D42752E768761E043FC /* CoreGraphics.framework */; };
 		F2AF56F00E313B9CD0F4ADA3C5D73BDF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DF616941A51576DD057A9FD8F4AD8 /* Security.framework */; };
 		F4A1512E8C4D8C8194CBB276BF72A552 /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 15079220450705107F6BA66501E05009 /* AFHTTPRequestOperationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };

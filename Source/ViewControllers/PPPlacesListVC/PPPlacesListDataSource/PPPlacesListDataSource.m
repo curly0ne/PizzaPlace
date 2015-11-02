@@ -24,7 +24,9 @@
 @property (strong, nonatomic) id<PPPersistentStorageControllerProtocol> storageController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) UITableView *tableView;
+
+@property (weak, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) PPActivityIndicatorFooterView *sectionFooterView;
 
 - (void)prepareTableView;
 - (void)setupFetchController;
@@ -71,7 +73,9 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-	return [tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([PPActivityIndicatorFooterView class])];
+	[self setSectionFooterView:[tableView dequeueReusableHeaderFooterViewWithIdentifier:NSStringFromClass([PPActivityIndicatorFooterView class])]];
+	
+	return [self sectionFooterView];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(nonnull UIView *)view forSection:(NSInteger)section
@@ -80,12 +84,15 @@
 	{
 		inProgress_ = YES;
 		
+		[[self sectionFooterView] startAnimating];
+		
 		[[self delegate] dataSource:self isRequestingForDataUpdateWithCurrentObjectsCount:currentNumberOfCells_];
 	}
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section
 {
+	[[self sectionFooterView] stopAnimating];
 }
 
 #pragma mark - UITableViewDataSource
@@ -171,10 +178,12 @@
 
 - (void)resetToIdle
 {
-	PPWeakSelf;
+	[[self sectionFooterView] stopAnimating];
 	
 	if (currentNumberOfCells_ == 0)
 		return;
+	
+	PPWeakSelf;
 	
 	[UIView animateWithDuration:0.3
 					 animations:^

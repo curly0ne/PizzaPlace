@@ -13,6 +13,8 @@
 
 #import <CoreData/CoreData.h>
 
+NSString *PPDatabaseErrorDomain = @"PPDatabaseErrorDomain";
+
 @interface PPDatabaseGateway ()
 
 @property (strong, nonatomic) id<PPPersistentStorageControllerProtocol> storageController;

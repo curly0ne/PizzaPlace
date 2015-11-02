@@ -8,4 +8,7 @@
 
 @interface PPActivityIndicatorFooterView : UITableViewHeaderFooterView
 
+- (void)startAnimating;
+- (void)stopAnimating;
+
 @end
